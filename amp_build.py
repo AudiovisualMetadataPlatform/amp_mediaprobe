@@ -51,8 +51,8 @@ def main():
     # Package it, if needed
     if args.package:
         try:
-            new_package = create_package(Path(args.destination), target,
-                                         metadata={'name': 'mediaprobe', 'version': '1.0', 'install_path': 'data/MediaProbe'})                                         
+            new_package = create_package("mediaprobe", "1.0", "data/MediaProbe",
+                                         Path(args.destination), target)                                                                                    
             logging.info(f"New package in {new_package}")    
         except Exception as e:
             logging.error(f"Failed to build backage: {e}")
