@@ -51,7 +51,7 @@ def main():
     # Package it, if needed
     if args.package:
         try:
-            new_package = create_package("mediaprobe", "1.0.0", "data/MediaProbe",
+            new_package = create_package("mediaprobe", "1.0.1", "data/MediaProbe",
                                          Path(args.destination), target)                                                                                    
             logging.info(f"New package in {new_package}")    
         except Exception as e:
